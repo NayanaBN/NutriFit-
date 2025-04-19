@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Tracking - NutriFit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="nutrifit background animation video.mp4" type="video/mp4">
+            <source src="nutrifit background animation video.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <header>
+        <h1>NutriFit - Diet Tracking</h1>
+        <nav>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="planner.html">Nutrition Planner</a>
+            <a href="diet_tracking.html">Diet Tracking</a>
+            <a href="exercise.html">Exercise & Fitness</a>
+            <a href="progress.html">Progress Tracking</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Log Your Meals</h2>
+        <input type="text" id="foodItem" placeholder="Enter food item">
+        <input type="number" id="calories" placeholder="Calories">
+        <button onclick="logMeal()">Add Meal</button>
+
+        <h3>Today's Intake</h3>
+        <ul id="mealList"></ul>
+
+        <h3>Calorie Consumption</h3>
+        <canvas id="calorieChart" width="250" height="250"></canvas>
+        
+        <h3>BMI (Body Mass Index) Calculator</h3>
+        <p>Know if your weight is healthy for your height.</p>
+        
+        <label for="weight">Enter your weight (in kilograms):</label><br>
+        <input type="number" id="weight" placeholder="e.g., 70"><br><br>
+        
+        <label for="height">Enter your height (in centimeters):</label><br>
+        <input type="number" id="height" placeholder="e.g., 170"><br><br>
+        
+        <button onclick="calculateBMI()">Calculate My BMI</button>
+        
+        <p id="bmiResult" style="margin-top: 15px; font-weight: bold;"></p>
+        
+        <div id="bmiInfo" style="margin-top: 10px;">
+            <p><strong>BMI Meaning:</strong></p>
+            <ul>
+                <li><strong>Below 18.5:</strong> Underweight</li>
+                <li><strong>18.5 – 24.9:</strong> Healthy weight</li>
+                <li><strong>25 – 29.9:</strong> Overweight</li>
+                <li><strong>30 and above:</strong> Obese</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <audio id="reminderSound" src="reminder.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <footer>
+        &copy; 2025 NANT. All rights reserved.
+    </footer>
+
+</body>
+</html>
